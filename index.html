@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Huzaifa Ashraf — Behance Portfolio</title>
+<title>Huzaifa Ashraf — Portfolio</title>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -20,13 +20,13 @@
   --mid:     rgba(255,255,255,0.68);
 }
 
-body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; width: 1400px; }
+body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; max-width: 1400px; margin: 0 auto; width: 100%; }
 
 /* ══ HERO ══ */
 .hero {
   min-height: 100vh; display: flex; flex-direction: column;
   align-items: center; justify-content: center;
-  text-align: center; padding: 80px; position: relative; overflow: hidden;
+  text-align: center; padding: 80px 40px; position: relative; overflow: hidden;
 }
 .g1 {
   position: absolute; width: 700px; height: 700px; border-radius: 50%;
@@ -82,7 +82,7 @@ body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-ser
   margin-bottom: 20px;
 }
 .flag-row {
-  display: flex; gap: 18px; justify-content: center; position: relative; z-index: 1;
+  display: flex; gap: 18px; justify-content: center; position: relative; z-index: 1; flex-wrap: wrap;
 }
 .flag {
   background: rgba(255,255,255,0.04); border: 1px solid var(--border);
@@ -96,10 +96,10 @@ body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-ser
   gap: 0; border-top: 1px solid var(--border);
 }
 .about-left {
-  padding: 80px 80px 80px 120px;
+  padding: 80px 60px 80px 80px;
   border-right: 1px solid var(--border);
 }
-.about-right { padding: 80px 120px 80px 80px; }
+.about-right { padding: 80px 80px 80px 60px; }
 .sec-label {
   font-size: 10px; letter-spacing: 5px; text-transform: uppercase;
   color: var(--accent); margin-bottom: 18px; display: block;
@@ -119,7 +119,7 @@ body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-ser
 
 /* ══ SERVICES ══ */
 .services {
-  padding: 80px 120px; border-top: 1px solid var(--border);
+  padding: 80px; border-top: 1px solid var(--border);
 }
 .services h2 {
   font-family: 'Syne', sans-serif; font-size: 52px; font-weight: 800;
@@ -140,7 +140,7 @@ body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-ser
 
 /* ══ PROJECT HEADING ══ */
 .proj-heading {
-  padding: 70px 120px 40px;
+  padding: 70px 80px 40px;
   border-top: 1px solid var(--border);
   display: flex; align-items: flex-end; justify-content: space-between;
 }
@@ -152,7 +152,7 @@ body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-ser
 
 /* ══ PROJECT CARD ══ */
 .project {
-  margin: 0 80px 64px;
+  margin: 0 40px 64px;
   border: 1px solid var(--border); border-radius: 20px; overflow: hidden;
   background: var(--bg2);
 }
@@ -191,7 +191,6 @@ body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-ser
   flex: 1; max-width: 300px;
 }
 
-/* Screenshot placeholder - unique per project */
 .shot {
   height: 440px; display: flex; align-items: center; justify-content: center;
   position: relative; overflow: hidden;
@@ -201,9 +200,9 @@ body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-ser
 .s3{background:linear-gradient(135deg,#150a10,#2a1020,#150a10)}
 .s4{background:linear-gradient(135deg,#060d1a,#0d1e35,#060d1a)}
 .s5{background:linear-gradient(135deg,#060f0a,#0d2015,#060f0a)}
-.s6{background:linear-gradient(135deg,#0d0d0d,#1a1a1a,#0d0d0d)}
-.s7{background:linear-gradient(135deg,#0a0515,#1a0a28,#0a0515)}
-.s8{background:linear-gradient(135deg,#0d0a04,#201808,#0d0a04)}
+.s6{background:linear-gradient(135deg,#0f0a00,#201800,#0f0a00)}
+.s7{background:linear-gradient(135deg,#00080f,#001525,#00080f)}
+.s8{background:linear-gradient(135deg,#0a0010,#150025,#0a0010)}
 
 .shot-glow {
   position: absolute; width: 500px; height: 500px; border-radius: 50%;
@@ -211,16 +210,6 @@ body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-ser
   top: 50%; left: 50%; transform: translate(-50%,-50%);
 }
 .shot-inner { display: none !important; }
-.shot-emoji { font-size: 54px; display: block; margin-bottom: 18px; }
-.shot-title {
-  font-family: 'Syne', sans-serif; font-size: 30px; font-weight: 800;
-  color: rgba(255,255,255,0.8); margin-bottom: 14px;
-}
-.shot-hint {
-  font-size: 12px; color: rgba(255,255,255,0.22);
-  border: 1px dashed rgba(255,255,255,0.12);
-  padding: 9px 20px; border-radius: 8px; display: inline-block;
-}
 
 /* ══ PROJECT DETAILS ROW ══ */
 .proj-details {
@@ -261,7 +250,7 @@ body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-ser
 
 /* ══ CONTACT ══ */
 .contact {
-  padding: 100px 120px 80px; border-top: 1px solid var(--border);
+  padding: 100px 80px 80px; border-top: 1px solid var(--border);
   text-align: center; position: relative; overflow: hidden;
 }
 .contact::before {
@@ -279,22 +268,108 @@ body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-ser
   -webkit-background-clip: text; -webkit-text-fill-color: transparent;
 }
 .contact p { color: var(--dim); font-size: 14px; position: relative; z-index: 1; margin-bottom: 48px; }
-.c-btns { display: flex; gap: 14px; justify-content: center; position: relative; z-index: 1; }
+.c-btns { display: flex; gap: 14px; justify-content: center; position: relative; z-index: 1; flex-wrap: wrap; }
 .cbtn { padding: 13px 38px; border-radius: 9px; font-size: 14px; font-weight: 600; text-decoration: none; }
 .cbtn.pr { background: linear-gradient(135deg,#6c63ff,#9d8fff); color: #fff; }
 .cbtn.ol { border: 1px solid rgba(255,255,255,.12); color: var(--mid); }
 
 .footer {
-  padding: 28px 120px; border-top: 1px solid var(--border);
+  padding: 28px 80px; border-top: 1px solid var(--border);
   display: flex; justify-content: space-between; align-items: center;
 }
 .footer-name { font-family: 'Syne', sans-serif; font-size: 18px; font-weight: 800; }
 .footer-txt { font-size: 12px; color: var(--dim); }
+
+/* ══════════════════════════════════════
+   TABLET — 768px to 1024px
+══════════════════════════════════════ */
+@media (max-width: 1024px) {
+  .hero { padding: 60px 30px; }
+  .hero h1 { font-size: 72px; letter-spacing: -2px; }
+  .hero-stats { gap: 40px; }
+
+  .about { grid-template-columns: 1fr; }
+  .about-left { padding: 60px 40px 40px; border-right: none; border-bottom: 1px solid var(--border); }
+  .about-right { padding: 40px 40px 60px; }
+  .about-left h2 { font-size: 36px; }
+
+  .services { padding: 60px 40px; }
+  .services h2 { font-size: 40px; }
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .proj-heading { padding: 50px 40px 30px; flex-direction: column; align-items: flex-start; gap: 16px; }
+  .proj-heading h2 { font-size: 40px; }
+  .proj-heading p { text-align: left; max-width: 100%; }
+
+  .project { margin: 0 20px 40px; }
+  .browser { margin: 0 20px; }
+  .proj-top { padding: 20px 24px; flex-direction: column; align-items: flex-start; gap: 12px; }
+
+  .proj-details { grid-template-columns: 1fr; }
+  .proj-desc { padding: 28px 24px; border-right: none; border-bottom: 1px solid var(--border); }
+  .proj-sidebar { padding: 24px; }
+
+  .contact { padding: 70px 40px 60px; }
+  .contact h2 { font-size: 56px; }
+
+  .footer { padding: 24px 40px; }
+}
+
+/* ══════════════════════════════════════
+   MOBILE — under 768px
+══════════════════════════════════════ */
+@media (max-width: 768px) {
+  .hero { padding: 60px 20px; min-height: auto; padding-top: 100px; padding-bottom: 80px; }
+  .hero h1 { font-size: 52px; letter-spacing: -1px; }
+  .hero-role { font-size: 11px; letter-spacing: 2px; }
+  .hero-stats { gap: 24px; flex-wrap: wrap; justify-content: center; }
+  .stat-n { font-size: 32px; }
+  .eyebrow { font-size: 9px; letter-spacing: 3px; }
+  .eyebrow::before, .eyebrow::after { width: 20px; }
+
+  .about-left { padding: 40px 20px 30px; }
+  .about-right { padding: 30px 20px 40px; }
+  .about-left h2 { font-size: 28px; }
+  .about-left p { font-size: 13px; }
+
+  .services { padding: 40px 20px; }
+  .services h2 { font-size: 30px; margin-bottom: 28px; }
+  .services-grid { grid-template-columns: 1fr; gap: 14px; }
+  .svc-card { padding: 24px 20px; }
+
+  .proj-heading { padding: 40px 20px 20px; }
+  .proj-heading h2 { font-size: 30px; }
+  .proj-heading p { font-size: 13px; }
+
+  .project { margin: 0 12px 32px; border-radius: 14px; }
+  .browser { margin: 0 12px; }
+  .proj-top { padding: 16px 20px; }
+  .proj-name { font-size: 20px; }
+  .proj-badge { font-size: 11px; padding: 5px 12px; }
+
+  .shot { height: 220px; }
+
+  .proj-desc { padding: 20px; }
+  .proj-desc h3 { font-size: 15px; }
+  .proj-desc p { font-size: 12px; }
+  .proj-sidebar { padding: 20px; }
+
+  .contact { padding: 50px 20px 40px; }
+  .contact h2 { font-size: 38px; }
+  .contact p { font-size: 13px; }
+  .cbtn { padding: 12px 28px; font-size: 13px; }
+
+  .footer { padding: 20px; flex-direction: column; gap: 8px; text-align: center; }
+
+  .flag-row { gap: 8px; }
+  .flag { padding: 6px 12px; font-size: 12px; }
+  .pill { padding: 6px 14px; font-size: 12px; }
+}
 </style>
 </head>
 <body>
 
-<!-- ██ SLIDE 1: HERO ██ -->
+<!-- ██ HERO ██ -->
 <section class="hero">
   <div class="g1"></div><div class="g2"></div>
   <div class="eyebrow">Web Design &amp; Development Portfolio — 2024</div>
@@ -324,7 +399,7 @@ body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-ser
   </div>
 </section>
 
-<!-- ██ SLIDE 2: ABOUT ██ -->
+<!-- ██ ABOUT ██ -->
 <div class="about">
   <div class="about-left">
     <span class="sec-label">About Me</span>
@@ -364,7 +439,7 @@ body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-ser
   </div>
 </div>
 
-<!-- ██ SLIDE 3: SERVICES ██ -->
+<!-- ██ SERVICES ██ -->
 <div class="services">
   <h2>What I <em>Offer</em></h2>
   <div class="services-grid">
@@ -407,9 +482,7 @@ body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-ser
   <p>8 client websites across construction, fitness, food, cleaning, fashion, swimwear, and coaching industries.</p>
 </div>
 
-<!-- ─────────────────────────────────────
-     PROJECT 1 — HARPER CONSTRUCTION
-───────────────────────────────────── -->
+<!-- PROJECT 1 — HARPER CONSTRUCTION -->
 <div class="project">
   <div class="proj-top">
     <div>
@@ -424,19 +497,14 @@ body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-ser
       <div class="dot r"></div><div class="dot y"></div><div class="dot g"></div>
       <div class="url-strip">www.harperconstruction.com</div>
     </div>
-   <div class="shot s1" id="p1" style="background-image:url('harper.png');background-size:cover;background-position:center top">
+    <div class="shot s1" id="p1" style="background-image:url('harper.png');background-size:cover;background-position:center top">
       <div class="shot-glow"></div>
-      <div class="shot-inner">
-        <span class="shot-emoji">🏗️</span>
-        <div class="shot-title">Harper Construction</div>
-        <div class="shot-hint">📸 Website ka hero screenshot yahan paste karo</div>
-      </div>
     </div>
   </div>
   <div class="proj-details">
     <div class="proj-desc">
       <h3>Corporate Website — General Contractor (Since 1974)</h3>
-      <p>A professional corporate website for Harper Construction Company — a San Diego-based General Contractor with 50 years of industry excellence. The site showcases their projects, services, and team with a clean, authoritative design that reflects their legacy and credibility in the construction industry.</p>
+      <p>A professional corporate website for Harper Construction Company — a San Diego-based General Contractor with 50 years of industry excellence. The site showcases their projects, services, and team with a clean, authoritative design that reflects their legacy and credibility.</p>
       <div class="feat-wrap">
         <span class="feat">Custom WordPress Theme</span>
         <span class="feat">Project Showcase Gallery</span>
@@ -490,11 +558,6 @@ body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-ser
     </div>
     <div class="shot s2" id="p2" style="background-image:url('gymshark.png');background-size:cover;background-position:center top">
       <div class="shot-glow"></div>
-      <div class="shot-inner">
-        <span class="shot-emoji">💪</span>
-        <div class="shot-title">Gymshark</div>
-        <div class="shot-hint">📸 Website ka hero screenshot yahan paste karo</div>
-      </div>
     </div>
   </div>
   <div class="proj-details">
@@ -553,11 +616,6 @@ body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-ser
     </div>
     <div class="shot s3" id="p3" style="background-image:url('magnolia.png');background-size:cover;background-position:center top">
       <div class="shot-glow"></div>
-      <div class="shot-inner">
-        <span class="shot-emoji">🧁</span>
-        <div class="shot-title">Magnolia Bakery</div>
-        <div class="shot-hint">📸 Website ka hero screenshot yahan paste karo</div>
-      </div>
     </div>
   </div>
   <div class="proj-details">
@@ -598,117 +656,107 @@ body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-ser
   </div>
 </div>
 
-<!-- PROJECT 4 — JBN CLEANING -->
+<!-- PROJECT 4 — MOLLY'S SUDS -->
 <div class="project">
   <div class="proj-top">
     <div>
       <div class="proj-num">Project 04</div>
-      <div class="proj-name">JBN Cleaning</div>
-      <div class="proj-url">jbncleaning.com.au — Australia</div>
+      <div class="proj-name">Molly's Suds</div>
+      <div class="proj-url">mollyssuds.com — USA</div>
     </div>
-    <span class="proj-badge">🧹 Cleaning Services</span>
+    <span class="proj-badge">🧼 Cleaning & Wellness</span>
   </div>
   <div class="browser">
     <div class="bar-row">
       <div class="dot r"></div><div class="dot y"></div><div class="dot g"></div>
-      <div class="url-strip">jbncleaning.com.au</div>
+      <div class="url-strip">www.mollyssuds.com</div>
     </div>
-    <div class="shot s4" id="p4" style="background-image:url('jbn.png');background-size:cover;background-position:center top">
+    <div class="shot s4" id="p4" style="background-image:url('molly.png');background-size:cover;background-position:center top">
       <div class="shot-glow"></div>
-      <div class="shot-inner">
-        <span class="shot-emoji">🧹</span>
-        <div class="shot-title">JBN Cleaning</div>
-        <div class="shot-hint">📸 Website ka hero screenshot yahan paste karo</div>
-      </div>
     </div>
   </div>
   <div class="proj-details">
     <div class="proj-desc">
-      <h3>Lead Generation Website — Cleaning Services, Australia</h3>
-      <p>A conversion-focused lead generation website for JBN Cleaning — an Australian professional cleaning company. Built to drive enquiries and bookings with a clear service breakdown, trust signals, and optimized contact forms that convert visitors into paying clients.</p>
+      <h3>E-Commerce Store — Natural Cleaning & Laundry Products, USA</h3>
+      <p>A clean, wellness-forward e-commerce store for Molly's Suds — a brand specializing in natural, non-toxic laundry and cleaning products. The website focuses on communicating the brand's health-conscious values while providing a smooth, trust-building shopping experience.</p>
       <div class="feat-wrap">
-        <span class="feat">Lead Gen Focused</span>
-        <span class="feat">Booking / Quote Forms</span>
-        <span class="feat">Services Pages</span>
-        <span class="feat">Google Maps</span>
-        <span class="feat">Local SEO</span>
-        <span class="feat">Mobile Responsive</span>
+        <span class="feat">Shopify Store</span>
+        <span class="feat">Subscription Products</span>
+        <span class="feat">Bundle Builder</span>
+        <span class="feat">Product Reviews</span>
+        <span class="feat">Clean Brand Design</span>
+        <span class="feat">Mobile Optimized</span>
       </div>
     </div>
     <div class="proj-sidebar">
       <div class="sb-block">
         <span class="sb-label">Tech Stack</span>
         <div class="tech-wrap">
-          <span class="tech">WordPress</span>
-          <span class="tech">Elementor</span>
+          <span class="tech">Shopify</span>
+          <span class="tech">Liquid</span>
           <span class="tech">CSS3</span>
         </div>
       </div>
       <div class="sb-block">
         <span class="sb-label">Industry</span>
-        <div class="sb-val">Cleaning Services</div>
+        <div class="sb-val">Cleaning &amp; Wellness</div>
       </div>
       <div class="sb-block">
         <span class="sb-label">Client Location</span>
-        <div class="sb-val">🇦🇺 Australia</div>
+        <div class="sb-val">🇺🇸 USA</div>
       </div>
       <div class="sb-block">
         <span class="sb-label">Live Site</span>
-        <a class="live-link" href="https://jbncleaning.com.au" target="_blank">↗ View Live</a>
+        <a class="live-link" href="https://www.mollyssuds.com" target="_blank">↗ View Live</a>
       </div>
     </div>
   </div>
 </div>
 
-<!-- PROJECT 5 — ANZ CLEANING -->
+<!-- PROJECT 5 — PEACHYMAMA -->
 <div class="project">
   <div class="proj-top">
     <div>
       <div class="proj-num">Project 05</div>
-      <div class="proj-name">ANZ Cleaning Services</div>
-      <div class="proj-url">anzcleaningservices.com.au — Australia</div>
+      <div class="proj-name">Peachy Mama</div>
+      <div class="proj-url">peachymama.com.au — Australia</div>
     </div>
-    <span class="proj-badge">✨ Cleaning Services</span>
+    <span class="proj-badge">🍑 Maternity Fashion</span>
   </div>
   <div class="browser">
     <div class="bar-row">
       <div class="dot r"></div><div class="dot y"></div><div class="dot g"></div>
-      <div class="url-strip">anzcleaningservices.com.au</div>
+      <div class="url-strip">www.peachymama.com.au</div>
     </div>
-    <div class="shot s5" id="p5" style="background-image:url('anz.png');background-size:cover;background-position:center top">
+    <div class="shot s5" id="p5" style="background-image:url('peachy.png');background-size:cover;background-position:center top">
       <div class="shot-glow"></div>
-      <div class="shot-inner">
-        <span class="shot-emoji">✨</span>
-        <div class="shot-title">ANZ Cleaning Services</div>
-        <div class="shot-hint">📸 Website ka hero screenshot yahan paste karo</div>
-      </div>
     </div>
   </div>
   <div class="proj-details">
     <div class="proj-desc">
-      <h3>Service Website — Professional Cleaning Company, Australia</h3>
-      <p>A clean, professional service website for ANZ Cleaning Services targeting residential and commercial clients across Australia. Designed to build trust quickly with clear service listings, client testimonials, and easy-to-find contact information — all optimized for local search visibility.</p>
+      <h3>Maternity Fashion E-Commerce — Australia</h3>
+      <p>A warm and stylish e-commerce store for Peachy Mama — an Australian maternity fashion brand. Designed to make shopping easy and enjoyable for expecting mothers, with intuitive product browsing, size guides, and a smooth checkout flow tailored to the brand's soft, feminine aesthetic.</p>
       <div class="feat-wrap">
-        <span class="feat">Service Listings</span>
-        <span class="feat">Testimonials</span>
-        <span class="feat">Quote Request Form</span>
-        <span class="feat">Local SEO</span>
-        <span class="feat">Fast Load Speed</span>
-        <span class="feat">Mobile First</span>
+        <span class="feat">Shopify Store</span>
+        <span class="feat">Size Guide</span>
+        <span class="feat">Product Filtering</span>
+        <span class="feat">Wishlist</span>
+        <span class="feat">Loyalty Program</span>
+        <span class="feat">Mobile Optimized</span>
       </div>
     </div>
     <div class="proj-sidebar">
       <div class="sb-block">
         <span class="sb-label">Tech Stack</span>
         <div class="tech-wrap">
-          <span class="tech">WordPress</span>
-          <span class="tech">ACF</span>
-          <span class="tech">PHP</span>
+          <span class="tech">Shopify</span>
+          <span class="tech">Liquid</span>
+          <span class="tech">JS</span>
         </div>
       </div>
       <div class="sb-block">
         <span class="sb-label">Industry</span>
-        <div class="sb-val">Cleaning Services</div>
+        <div class="sb-val">Maternity &amp; Fashion</div>
       </div>
       <div class="sb-block">
         <span class="sb-label">Client Location</span>
@@ -716,7 +764,7 @@ body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-ser
       </div>
       <div class="sb-block">
         <span class="sb-label">Live Site</span>
-        <a class="live-link" href="https://www.anzcleaningservices.com.au" target="_blank">↗ View Live</a>
+        <a class="live-link" href="https://www.peachymama.com.au" target="_blank">↗ View Live</a>
       </div>
     </div>
   </div>
@@ -739,11 +787,6 @@ body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-ser
     </div>
     <div class="shot s6" id="p6" style="background-image:url('cuts.png');background-size:cover;background-position:center top">
       <div class="shot-glow"></div>
-      <div class="shot-inner">
-        <span class="shot-emoji">👔</span>
-        <div class="shot-title">Cuts Clothing</div>
-        <div class="shot-hint">📸 Website ka hero screenshot yahan paste karo</div>
-      </div>
     </div>
   </div>
   <div class="proj-details">
@@ -801,11 +844,6 @@ body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-ser
     </div>
     <div class="shot s7" id="p7" style="background-image:url('kulani.png');background-size:cover;background-position:center top">
       <div class="shot-glow"></div>
-      <div class="shot-inner">
-        <span class="shot-emoji">👙</span>
-        <div class="shot-title">Kulani Kinis</div>
-        <div class="shot-hint">📸 Website ka hero screenshot yahan paste karo</div>
-      </div>
     </div>
   </div>
   <div class="proj-details">
@@ -863,11 +901,6 @@ body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-ser
     </div>
     <div class="shot s8" id="p8" style="background-image:url('coach.png');background-size:cover;background-position:center top">
       <div class="shot-glow"></div>
-      <div class="shot-inner">
-        <span class="shot-emoji">🎯</span>
-        <div class="shot-title">My Master Coach</div>
-        <div class="shot-hint">📸 Website ka hero screenshot yahan paste karo</div>
-      </div>
     </div>
   </div>
   <div class="proj-details">
@@ -916,11 +949,15 @@ body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-ser
   <p>Open to Full-Time Remote · Part-Time Remote · Contract / Project-Based<br>
   Available immediately · Flexible across USA (EST/PST) &amp; Australia (AEST) time zones</p>
   <div class="c-btns">
-    <a class="cbtn pr" href="/cdn-cgi/l/email-protection#1a63756f685a7f777b737634797577">📧 <span class="__cf_email__" data-cfemail="1861776d6a587d75797174367b7775"> Huzaifa.ashraf.biz@gmail.com</span></a>
-    <a class="cbtn ol" href="https://www.linkedin.com/in/huzaifa-ashraf-474638230/">LinkedIn
+    <a class="cbtn pr" href="mailto:huzaifaashraf.biz@gmail.com">📧 Email Me</a>
+    <a class="cbtn ol" href="https://www.linkedin.com/in/huzaifa-ashraf-474638230/" target="_blank">LinkedIn</a>
   </div>
 </div>
 
 <div class="footer">
   <div class="footer-name">Huzaifa Ashraf</div>
-  <div class="footer-txt">WordPress Developer &amp; Web Des
+  <div class="footer-txt">WordPress Developer · Web Designer · UI/UX — 2024</div>
+</div>
+
+</body>
+</html>
