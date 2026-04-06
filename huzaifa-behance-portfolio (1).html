@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1400">
+<title>Huzaifa Ashraf — Behance Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg:      #07070f;
+  --bg2:     #0d0d1a;
+  --bg3:     #12121f;
+  --border:  rgba(255,255,255,0.07);
+  --accent:  #6c63ff;
+  --accent2: #38bdf8;
+  --text:    #ffffff;
+  --dim:     rgba(255,255,255,0.42);
+  --mid:     rgba(255,255,255,0.68);
+}
+
+body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; width: 1400px; }
+
+/* ══ HERO ══ */
+.hero {
+  min-height: 100vh; display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  text-align: center; padding: 80px; position: relative; overflow: hidden;
+}
+.g1 {
+  position: absolute; width: 700px; height: 700px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(108,99,255,.2) 0%, transparent 65%);
+  top: 50%; left: 50%; transform: translate(-50%,-55%); pointer-events: none;
+}
+.g2 {
+  position: absolute; width: 350px; height: 350px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(56,189,248,.12) 0%, transparent 65%);
+  bottom: 15%; right: 10%; pointer-events: none;
+}
+.eyebrow {
+  font-size: 11px; letter-spacing: 5px; text-transform: uppercase;
+  color: var(--accent); margin-bottom: 32px; position: relative;
+  display: flex; align-items: center; gap: 14px;
+}
+.eyebrow::before, .eyebrow::after {
+  content: ''; width: 40px; height: 1px; background: var(--accent); opacity: .5;
+}
+.hero h1 {
+  font-family: 'Syne', sans-serif; font-size: 104px; font-weight: 800;
+  line-height: .93; letter-spacing: -4px; position: relative; z-index: 1;
+}
+.hero h1 em {
+  font-style: normal;
+  background: linear-gradient(135deg, #6c63ff 0%, #a78bfa 45%, #38bdf8 100%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+.hero-role {
+  margin-top: 28px; font-size: 14px; color: var(--dim);
+  letter-spacing: 3px; text-transform: uppercase; position: relative; z-index: 1;
+}
+.hero-pills {
+  display: flex; gap: 10px; margin-top: 40px; flex-wrap: wrap;
+  justify-content: center; position: relative; z-index: 1;
+}
+.pill {
+  background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.09);
+  padding: 8px 22px; border-radius: 100px; font-size: 13px; color: var(--mid);
+}
+.hero-stats {
+  display: flex; gap: 70px; margin-top: 64px; position: relative; z-index: 1;
+}
+.stat { text-align: center; }
+.stat-n {
+  font-family: 'Syne', sans-serif; font-size: 44px; font-weight: 800;
+}
+.stat-n span { color: var(--accent); }
+.stat-l { font-size: 11px; color: var(--dim); margin-top: 4px; letter-spacing: 1px; text-transform: uppercase; }
+.hero-clients {
+  margin-top: 56px; position: relative; z-index: 1;
+  font-size: 11px; color: var(--dim); letter-spacing: 3px; text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.flag-row {
+  display: flex; gap: 18px; justify-content: center; position: relative; z-index: 1;
+}
+.flag {
+  background: rgba(255,255,255,0.04); border: 1px solid var(--border);
+  padding: 8px 20px; border-radius: 8px; font-size: 13px; color: var(--mid);
+  display: flex; align-items: center; gap: 8px;
+}
+
+/* ══ ABOUT ══ */
+.about {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 0; border-top: 1px solid var(--border);
+}
+.about-left {
+  padding: 80px 80px 80px 120px;
+  border-right: 1px solid var(--border);
+}
+.about-right { padding: 80px 120px 80px 80px; }
+.sec-label {
+  font-size: 10px; letter-spacing: 5px; text-transform: uppercase;
+  color: var(--accent); margin-bottom: 18px; display: block;
+}
+.about-left h2 {
+  font-family: 'Syne', sans-serif; font-size: 44px; font-weight: 800;
+  line-height: 1.08; margin-bottom: 24px;
+}
+.about-left p { color: var(--dim); font-size: 14px; line-height: 1.9; }
+.skills-list { display: flex; flex-direction: column; gap: 18px; margin-top: 8px; }
+.skill-row { display: flex; flex-direction: column; gap: 8px; }
+.skill-top { display: flex; justify-content: space-between; }
+.skill-name { font-size: 13px; font-weight: 500; }
+.skill-pct { font-size: 12px; color: var(--accent); font-weight: 600; }
+.bar { height: 3px; background: rgba(255,255,255,0.07); border-radius: 2px; }
+.bar-fill { height: 100%; border-radius: 2px; background: linear-gradient(90deg, #6c63ff, #38bdf8); }
+
+/* ══ SERVICES ══ */
+.services {
+  padding: 80px 120px; border-top: 1px solid var(--border);
+}
+.services h2 {
+  font-family: 'Syne', sans-serif; font-size: 52px; font-weight: 800;
+  margin-bottom: 48px;
+}
+.services h2 em { font-style: normal; color: var(--accent); }
+.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.svc-card {
+  background: var(--bg2); border: 1px solid var(--border);
+  border-radius: 16px; padding: 36px 32px;
+}
+.svc-icon { font-size: 32px; margin-bottom: 20px; display: block; }
+.svc-title {
+  font-family: 'Syne', sans-serif; font-size: 18px; font-weight: 700;
+  margin-bottom: 12px;
+}
+.svc-desc { font-size: 13px; color: var(--dim); line-height: 1.8; }
+
+/* ══ PROJECT HEADING ══ */
+.proj-heading {
+  padding: 70px 120px 40px;
+  border-top: 1px solid var(--border);
+  display: flex; align-items: flex-end; justify-content: space-between;
+}
+.proj-heading h2 {
+  font-family: 'Syne', sans-serif; font-size: 54px; font-weight: 800;
+}
+.proj-heading h2 em { font-style: normal; color: var(--accent); }
+.proj-heading p { max-width: 340px; color: var(--dim); font-size: 14px; line-height: 1.8; text-align: right; }
+
+/* ══ PROJECT CARD ══ */
+.project {
+  margin: 0 80px 64px;
+  border: 1px solid var(--border); border-radius: 20px; overflow: hidden;
+  background: var(--bg2);
+}
+.proj-top {
+  padding: 28px 44px;
+  border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: space-between;
+}
+.proj-num {
+  font-size: 10px; letter-spacing: 4px; color: var(--accent);
+  text-transform: uppercase; margin-bottom: 5px;
+}
+.proj-name { font-family: 'Syne', sans-serif; font-size: 26px; font-weight: 800; }
+.proj-url { font-size: 12px; color: var(--dim); margin-top: 3px; }
+.proj-badge {
+  background: rgba(108,99,255,.12); border: 1px solid rgba(108,99,255,.25);
+  color: #b8b0ff; padding: 7px 18px; border-radius: 100px; font-size: 12px;
+}
+
+/* ══ BROWSER FRAME ══ */
+.browser {
+  margin: 0 44px; border-radius: 12px; overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.05);
+}
+.bar-row {
+  background: #141428; padding: 11px 18px;
+  display: flex; align-items: center; gap: 7px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+.dot { width: 11px; height: 11px; border-radius: 50%; }
+.dot.r{background:#ff5f57}.dot.y{background:#febc2e}.dot.g{background:#28c840}
+.url-strip {
+  margin-left: 12px; background: rgba(255,255,255,0.05);
+  border-radius: 5px; padding: 4px 14px;
+  font-size: 11px; color: rgba(255,255,255,0.28);
+  flex: 1; max-width: 300px;
+}
+
+/* Screenshot placeholder - unique per project */
+.shot {
+  height: 440px; display: flex; align-items: center; justify-content: center;
+  position: relative; overflow: hidden;
+}
+.s1{background:linear-gradient(135deg,#090f18,#152030,#090f18)}
+.s2{background:linear-gradient(135deg,#0a0800,#201500,#0a0800)}
+.s3{background:linear-gradient(135deg,#150a10,#2a1020,#150a10)}
+.s4{background:linear-gradient(135deg,#060d1a,#0d1e35,#060d1a)}
+.s5{background:linear-gradient(135deg,#060f0a,#0d2015,#060f0a)}
+.s6{background:linear-gradient(135deg,#0d0d0d,#1a1a1a,#0d0d0d)}
+.s7{background:linear-gradient(135deg,#0a0515,#1a0a28,#0a0515)}
+.s8{background:linear-gradient(135deg,#0d0a04,#201808,#0d0a04)}
+
+.shot-glow {
+  position: absolute; width: 500px; height: 500px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(108,99,255,.15) 0%, transparent 65%);
+  top: 50%; left: 50%; transform: translate(-50%,-50%);
+}
+.shot-inner { display: none !important; }
+.shot-emoji { font-size: 54px; display: block; margin-bottom: 18px; }
+.shot-title {
+  font-family: 'Syne', sans-serif; font-size: 30px; font-weight: 800;
+  color: rgba(255,255,255,0.8); margin-bottom: 14px;
+}
+.shot-hint {
+  font-size: 12px; color: rgba(255,255,255,0.22);
+  border: 1px dashed rgba(255,255,255,0.12);
+  padding: 9px 20px; border-radius: 8px; display: inline-block;
+}
+
+/* ══ PROJECT DETAILS ROW ══ */
+.proj-details {
+  display: grid; grid-template-columns: 1fr 300px;
+  border-top: 1px solid var(--border);
+}
+.proj-desc {
+  padding: 36px 44px; border-right: 1px solid var(--border);
+}
+.proj-desc h3 {
+  font-family: 'Syne', sans-serif; font-size: 19px; font-weight: 700;
+  margin-bottom: 14px;
+}
+.proj-desc p { color: var(--dim); font-size: 13px; line-height: 1.9; }
+.feat-wrap { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+.feat {
+  background: rgba(255,255,255,0.03); border: 1px solid var(--border);
+  padding: 5px 13px; border-radius: 6px; font-size: 11px; color: var(--mid);
+}
+.proj-sidebar { padding: 36px 30px; }
+.sb-block { margin-bottom: 26px; }
+.sb-label {
+  font-size: 10px; letter-spacing: 3px; text-transform: uppercase;
+  color: rgba(255,255,255,0.22); margin-bottom: 9px; display: block;
+}
+.tech-wrap { display: flex; flex-wrap: wrap; gap: 7px; }
+.tech {
+  background: rgba(108,99,255,.1); border: 1px solid rgba(108,99,255,.22);
+  color: #b8b0ff; padding: 4px 11px; border-radius: 5px; font-size: 11px;
+}
+.sb-val { font-size: 13px; color: var(--mid); }
+.live-link {
+  display: inline-flex; align-items: center; gap: 7px;
+  background: linear-gradient(135deg, #6c63ff, #9d8fff);
+  color: #fff; padding: 9px 20px; border-radius: 7px;
+  font-size: 12px; font-weight: 600; text-decoration: none; margin-top: 4px;
+}
+
+/* ══ CONTACT ══ */
+.contact {
+  padding: 100px 120px 80px; border-top: 1px solid var(--border);
+  text-align: center; position: relative; overflow: hidden;
+}
+.contact::before {
+  content: ''; position: absolute; width: 900px; height: 500px;
+  background: radial-gradient(ellipse, rgba(108,99,255,.1) 0%, transparent 65%);
+  top: 0; left: 50%; transform: translateX(-50%);
+}
+.contact h2 {
+  font-family: 'Syne', sans-serif; font-size: 82px; font-weight: 800;
+  line-height: 1; position: relative; z-index: 1; margin-bottom: 16px;
+}
+.contact h2 em {
+  font-style: normal;
+  background: linear-gradient(135deg,#6c63ff,#38bdf8);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+.contact p { color: var(--dim); font-size: 14px; position: relative; z-index: 1; margin-bottom: 48px; }
+.c-btns { display: flex; gap: 14px; justify-content: center; position: relative; z-index: 1; }
+.cbtn { padding: 13px 38px; border-radius: 9px; font-size: 14px; font-weight: 600; text-decoration: none; }
+.cbtn.pr { background: linear-gradient(135deg,#6c63ff,#9d8fff); color: #fff; }
+.cbtn.ol { border: 1px solid rgba(255,255,255,.12); color: var(--mid); }
+
+.footer {
+  padding: 28px 120px; border-top: 1px solid var(--border);
+  display: flex; justify-content: space-between; align-items: center;
+}
+.footer-name { font-family: 'Syne', sans-serif; font-size: 18px; font-weight: 800; }
+.footer-txt { font-size: 12px; color: var(--dim); }
+</style>
+</head>
+<body>
+
+<!-- ██ SLIDE 1: HERO ██ -->
+<section class="hero">
+  <div class="g1"></div><div class="g2"></div>
+  <div class="eyebrow">Web Design &amp; Development Portfolio — 2024</div>
+  <h1>Huzaifa<br><em>Ashraf</em></h1>
+  <p class="hero-role">WordPress Developer &nbsp;·&nbsp; Web Designer &nbsp;·&nbsp; UI / UX</p>
+  <div class="hero-pills">
+    <span class="pill">WordPress</span>
+    <span class="pill">WooCommerce</span>
+    <span class="pill">Shopify</span>
+    <span class="pill">HTML / CSS / JS</span>
+    <span class="pill">PHP</span>
+    <span class="pill">Figma</span>
+    <span class="pill">Elementor</span>
+  </div>
+  <div class="hero-stats">
+    <div class="stat"><div class="stat-n">4<span>+</span></div><div class="stat-l">Years Experience</div></div>
+    <div class="stat"><div class="stat-n">50<span>+</span></div><div class="stat-l">Projects Delivered</div></div>
+    <div class="stat"><div class="stat-n">4</div><div class="stat-l">Countries Served</div></div>
+  </div>
+  <div class="hero-clients">Clients Across</div>
+  <div class="flag-row">
+    <span class="flag">🇺🇸 USA</span>
+    <span class="flag">🇦🇺 Australia</span>
+    <span class="flag">🇬🇧 UK</span>
+    <span class="flag">🇨🇦 Canada</span>
+    <span class="flag">🇪🇸 Spain</span>
+  </div>
+</section>
+
+<!-- ██ SLIDE 2: ABOUT ██ -->
+<div class="about">
+  <div class="about-left">
+    <span class="sec-label">About Me</span>
+    <h2>I build fast,<br>clean websites<br>that convert.</h2>
+    <p>WordPress Developer and Web Designer with 4+ years of experience delivering 50+ high-performance websites for businesses across the USA, Australia, UK, and Canada.<br><br>
+    Specialized in custom WordPress theme &amp; plugin development, WooCommerce, Shopify, and conversion-focused landing pages. Known for clean, scalable code, SEO-optimized builds, and on-time delivery.<br><br>
+    Available for remote full-time or contract roles — flexible across EST, PST, and AEST time zones.</p>
+  </div>
+  <div class="about-right">
+    <span class="sec-label">Core Skills</span>
+    <div class="skills-list">
+      <div class="skill-row">
+        <div class="skill-top"><span class="skill-name">WordPress (Themes &amp; Plugins)</span><span class="skill-pct">95%</span></div>
+        <div class="bar"><div class="bar-fill" style="width:95%"></div></div>
+      </div>
+      <div class="skill-row">
+        <div class="skill-top"><span class="skill-name">HTML5 / CSS3 / JavaScript</span><span class="skill-pct">92%</span></div>
+        <div class="bar"><div class="bar-fill" style="width:92%"></div></div>
+      </div>
+      <div class="skill-row">
+        <div class="skill-top"><span class="skill-name">WooCommerce / Shopify</span><span class="skill-pct">90%</span></div>
+        <div class="bar"><div class="bar-fill" style="width:90%"></div></div>
+      </div>
+      <div class="skill-row">
+        <div class="skill-top"><span class="skill-name">PHP / MySQL / REST API</span><span class="skill-pct">80%</span></div>
+        <div class="bar"><div class="bar-fill" style="width:80%"></div></div>
+      </div>
+      <div class="skill-row">
+        <div class="skill-top"><span class="skill-name">Figma to WordPress</span><span class="skill-pct">88%</span></div>
+        <div class="bar"><div class="bar-fill" style="width:88%"></div></div>
+      </div>
+      <div class="skill-row">
+        <div class="skill-top"><span class="skill-name">SEO &amp; Performance Optimization</span><span class="skill-pct">85%</span></div>
+        <div class="bar"><div class="bar-fill" style="width:85%"></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ██ SLIDE 3: SERVICES ██ -->
+<div class="services">
+  <h2>What I <em>Offer</em></h2>
+  <div class="services-grid">
+    <div class="svc-card">
+      <span class="svc-icon">⚙️</span>
+      <div class="svc-title">Custom WordPress Development</div>
+      <div class="svc-desc">Custom themes &amp; plugins built from scratch. Clean, scalable code tailored to your business needs — no bloated page builders.</div>
+    </div>
+    <div class="svc-card">
+      <span class="svc-icon">🛒</span>
+      <div class="svc-title">WooCommerce &amp; Shopify</div>
+      <div class="svc-desc">Full e-commerce solutions with payment gateways, product management, booking systems, and seamless checkout experience.</div>
+    </div>
+    <div class="svc-card">
+      <span class="svc-icon">🎯</span>
+      <div class="svc-title">Landing Pages &amp; Lead Gen</div>
+      <div class="svc-desc">High-converting landing pages designed around your target audience — optimized for leads, sales, and measurable ROI.</div>
+    </div>
+    <div class="svc-card">
+      <span class="svc-icon">🎨</span>
+      <div class="svc-title">Figma to WordPress</div>
+      <div class="svc-desc">Pixel-perfect conversion of Figma and PSD mockups into fully responsive, cross-browser compatible WordPress websites.</div>
+    </div>
+    <div class="svc-card">
+      <span class="svc-icon">🚀</span>
+      <div class="svc-title">Performance &amp; SEO</div>
+      <div class="svc-desc">Page speed optimization, caching, CDN setup, and SEO-friendly architecture — ensuring fast load times and better rankings.</div>
+    </div>
+    <div class="svc-card">
+      <span class="svc-icon">🔄</span>
+      <div class="svc-title">Website Redesign &amp; Rebuild</div>
+      <div class="svc-desc">Transform outdated websites into modern, high-performing platforms — improved design, speed, UX, and technical quality.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ██ PROJECTS HEADING ██ -->
+<div class="proj-heading">
+  <h2>Featured <em>Projects</em></h2>
+  <p>8 client websites across construction, fitness, food, cleaning, fashion, swimwear, and coaching industries.</p>
+</div>
+
+<!-- ─────────────────────────────────────
+     PROJECT 1 — HARPER CONSTRUCTION
+───────────────────────────────────── -->
+<div class="project">
+  <div class="proj-top">
+    <div>
+      <div class="proj-num">Project 01</div>
+      <div class="proj-name">Harper Construction</div>
+      <div class="proj-url">harperconstruction.com — USA</div>
+    </div>
+    <span class="proj-badge">🏗️ Construction</span>
+  </div>
+  <div class="browser">
+    <div class="bar-row">
+      <div class="dot r"></div><div class="dot y"></div><div class="dot g"></div>
+      <div class="url-strip">www.harperconstruction.com</div>
+    </div>
+   <div class="shot s1" id="p1" style="background-image:url('harper.png');background-size:cover;background-position:center top">
+      <div class="shot-glow"></div>
+      <div class="shot-inner">
+        <span class="shot-emoji">🏗️</span>
+        <div class="shot-title">Harper Construction</div>
+        <div class="shot-hint">📸 Website ka hero screenshot yahan paste karo</div>
+      </div>
+    </div>
+  </div>
+  <div class="proj-details">
+    <div class="proj-desc">
+      <h3>Corporate Website — General Contractor (Since 1974)</h3>
+      <p>A professional corporate website for Harper Construction Company — a San Diego-based General Contractor with 50 years of industry excellence. The site showcases their projects, services, and team with a clean, authoritative design that reflects their legacy and credibility in the construction industry.</p>
+      <div class="feat-wrap">
+        <span class="feat">Custom WordPress Theme</span>
+        <span class="feat">Project Showcase Gallery</span>
+        <span class="feat">Services Pages</span>
+        <span class="feat">Careers Section</span>
+        <span class="feat">Contact Forms</span>
+        <span class="feat">Mobile Responsive</span>
+        <span class="feat">SEO Optimized</span>
+      </div>
+    </div>
+    <div class="proj-sidebar">
+      <div class="sb-block">
+        <span class="sb-label">Tech Stack</span>
+        <div class="tech-wrap">
+          <span class="tech">WordPress</span>
+          <span class="tech">PHP</span>
+          <span class="tech">CSS3</span>
+          <span class="tech">ACF</span>
+        </div>
+      </div>
+      <div class="sb-block">
+        <span class="sb-label">Industry</span>
+        <div class="sb-val">Construction &amp; Engineering</div>
+      </div>
+      <div class="sb-block">
+        <span class="sb-label">Client Location</span>
+        <div class="sb-val">🇺🇸 San Diego, USA</div>
+      </div>
+      <div class="sb-block">
+        <span class="sb-label">Live Site</span>
+        <a class="live-link" href="https://www.harperconstruction.com" target="_blank">↗ View Live</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PROJECT 2 — GYMSHARK -->
+<div class="project">
+  <div class="proj-top">
+    <div>
+      <div class="proj-num">Project 02</div>
+      <div class="proj-name">Gymshark</div>
+      <div class="proj-url">gymshark.com — UK</div>
+    </div>
+    <span class="proj-badge">💪 Fitness & Apparel</span>
+  </div>
+  <div class="browser">
+    <div class="bar-row">
+      <div class="dot r"></div><div class="dot y"></div><div class="dot g"></div>
+      <div class="url-strip">www.gymshark.com</div>
+    </div>
+    <div class="shot s2" id="p2" style="background-image:url('gymshark.png');background-size:cover;background-position:center top">
+      <div class="shot-glow"></div>
+      <div class="shot-inner">
+        <span class="shot-emoji">💪</span>
+        <div class="shot-title">Gymshark</div>
+        <div class="shot-hint">📸 Website ka hero screenshot yahan paste karo</div>
+      </div>
+    </div>
+  </div>
+  <div class="proj-details">
+    <div class="proj-desc">
+      <h3>E-Commerce Store — Global Fitness Apparel Brand</h3>
+      <p>High-performance e-commerce development for Gymshark — one of the world's fastest-growing fitness apparel brands. Focused on delivering a seamless shopping experience with fast page loads, clean product layouts, and optimized conversion funnels built for a global audience.</p>
+      <div class="feat-wrap">
+        <span class="feat">Shopify / WooCommerce</span>
+        <span class="feat">Product Catalog</span>
+        <span class="feat">Fast Checkout</span>
+        <span class="feat">Performance Optimization</span>
+        <span class="feat">Mobile-First Design</span>
+        <span class="feat">Payment Gateway</span>
+      </div>
+    </div>
+    <div class="proj-sidebar">
+      <div class="sb-block">
+        <span class="sb-label">Tech Stack</span>
+        <div class="tech-wrap">
+          <span class="tech">Shopify</span>
+          <span class="tech">Liquid</span>
+          <span class="tech">JS</span>
+          <span class="tech">CSS3</span>
+        </div>
+      </div>
+      <div class="sb-block">
+        <span class="sb-label">Industry</span>
+        <div class="sb-val">Fitness &amp; E-Commerce</div>
+      </div>
+      <div class="sb-block">
+        <span class="sb-label">Client Location</span>
+        <div class="sb-val">🇬🇧 United Kingdom</div>
+      </div>
+      <div class="sb-block">
+        <span class="sb-label">Live Site</span>
+        <a class="live-link" href="https://www.gymshark.com" target="_blank">↗ View Live</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PROJECT 3 — MAGNOLIA BAKERY -->
+<div class="project">
+  <div class="proj-top">
+    <div>
+      <div class="proj-num">Project 03</div>
+      <div class="proj-name">Magnolia Bakery</div>
+      <div class="proj-url">magnoliabakery.com — USA</div>
+    </div>
+    <span class="proj-badge">🧁 Food & Bakery</span>
+  </div>
+  <div class="browser">
+    <div class="bar-row">
+      <div class="dot r"></div><div class="dot y"></div><div class="dot g"></div>
+      <div class="url-strip">www.magnoliabakery.com</div>
+    </div>
+    <div class="shot s3" id="p3" style="background-image:url('magnolia.png');background-size:cover;background-position:center top">
+      <div class="shot-glow"></div>
+      <div class="shot-inner">
+        <span class="shot-emoji">🧁</span>
+        <div class="shot-title">Magnolia Bakery</div>
+        <div class="shot-hint">📸 Website ka hero screenshot yahan paste karo</div>
+      </div>
+    </div>
+  </div>
+  <div class="proj-details">
+    <div class="proj-desc">
+      <h3>E-Commerce & Ordering Website — Iconic NYC Bakery</h3>
+      <p>A warm, brand-forward website for Magnolia Bakery — the iconic New York City bakery. Built with a focus on online ordering, menu browsing, and location discovery. The design reflects the brand's classic, cozy identity while delivering a smooth, modern shopping experience.</p>
+      <div class="feat-wrap">
+        <span class="feat">Online Ordering System</span>
+        <span class="feat">WooCommerce</span>
+        <span class="feat">Menu Pages</span>
+        <span class="feat">Location Finder</span>
+        <span class="feat">Brand Design</span>
+        <span class="feat">Responsive Layout</span>
+      </div>
+    </div>
+    <div class="proj-sidebar">
+      <div class="sb-block">
+        <span class="sb-label">Tech Stack</span>
+        <div class="tech-wrap">
+          <span class="tech">WordPress</span>
+          <span class="tech">WooCommerce</span>
+          <span class="tech">PHP</span>
+        </div>
+      </div>
+      <div class="sb-block">
+        <span class="sb-label">Industry</span>
+        <div class="sb-val">Food &amp; Bakery</div>
+      </div>
+      <div class="sb-block">
+        <span class="sb-label">Client Location</span>
+        <div class="sb-val">🇺🇸 New York, USA</div>
+      </div>
+      <div class="sb-block">
+        <span class="sb-label">Live Site</span>
+        <a class="live-link" href="https://www.magnoliabakery.com" target="_blank">↗ View Live</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PROJECT 4 — JBN CLEANING -->
+<div class="project">
+  <div class="proj-top">
+    <div>
+      <div class="proj-num">Project 04</div>
+      <div class="proj-name">JBN Cleaning</div>
+      <div class="proj-url">jbncleaning.com.au — Australia</div>
+    </div>
+    <span class="proj-badge">🧹 Cleaning Services</span>
+  </div>
+  <div class="browser">
+    <div class="bar-row">
+      <div class="dot r"></div><div class="dot y"></div><div class="dot g"></div>
+      <div class="url-strip">jbncleaning.com.au</div>
+    </div>
+    <div class="shot s4" id="p4" style="background-image:url('jbn.png');background-size:cover;background-position:center top">
+      <div class="shot-glow"></div>
+      <div class="shot-inner">
+        <span class="shot-emoji">🧹</span>
+        <div class="shot-title">JBN Cleaning</div>
+        <div class="shot-hint">📸 Website ka hero screenshot yahan paste karo</div>
+      </div>
+    </div>
+  </div>
+  <div class="proj-details">
+    <div class="proj-desc">
+      <h3>Lead Generation Website — Cleaning Services, Australia</h3>
+      <p>A conversion-focused lead generation website for JBN Cleaning — an Australian professional cleaning company. Built to drive enquiries and bookings with a clear service breakdown, trust signals, and optimized contact forms that convert visitors into paying clients.</p>
+      <div class="feat-wrap">
+        <span class="feat">Lead Gen Focused</span>
+        <span class="feat">Booking / Quote Forms</span>
+        <span class="feat">Services Pages</span>
+        <span class="feat">Google Maps</span>
+        <span class="feat">Local SEO</span>
+        <span class="feat">Mobile Responsive</span>
+      </div>
+    </div>
+    <div class="proj-sidebar">
+      <div class="sb-block">
+        <span class="sb-label">Tech Stack</span>
+        <div class="tech-wrap">
+          <span class="tech">WordPress</span>
+          <span class="tech">Elementor</span>
+          <span class="tech">CSS3</span>
+        </div>
+      </div>
+      <div class="sb-block">
+        <span class="sb-label">Industry</span>
+        <div class="sb-val">Cleaning Services</div>
+      </div>
+      <div class="sb-block">
+        <span class="sb-label">Client Location</span>
+        <div class="sb-val">🇦🇺 Australia</div>
+      </div>
+      <div class="sb-block">
+        <span class="sb-label">Live Site</span>
+        <a class="live-link" href="https://jbncleaning.com.au" target="_blank">↗ View Live</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PROJECT 5 — ANZ CLEANING -->
+<div class="project">
+  <div class="proj-top">
+    <div>
+      <div class="proj-num">Project 05</div>
+      <div class="proj-name">ANZ Cleaning Services</div>
+      <div class="proj-url">anzcleaningservices.com.au — Australia</div>
+    </div>
+    <span class="proj-badge">✨ Cleaning Services</span>
+  </div>
+  <div class="browser">
+    <div class="bar-row">
+      <div class="dot r"></div><div class="dot y"></div><div class="dot g"></div>
+      <div class="url-strip">anzcleaningservices.com.au</div>
+    </div>
+    <div class="shot s5" id="p5" style="background-image:url('anz.png');background-size:cover;background-position:center top">
+      <div class="shot-glow"></div>
+      <div class="shot-inner">
+        <span class="shot-emoji">✨</span>
+        <div class="shot-title">ANZ Cleaning Services</div>
+        <div class="shot-hint">📸 Website ka hero screenshot yahan paste karo</div>
+      </div>
+    </div>
+  </div>
+  <div class="proj-details">
+    <div class="proj-desc">
+      <h3>Service Website — Professional Cleaning Company, Australia</h3>
+      <p>A clean, professional service website for ANZ Cleaning Services targeting residential and commercial clients across Australia. Designed to build trust quickly with clear service listings, client testimonials, and easy-to-find contact information — all optimized for local search visibility.</p>
+      <div class="feat-wrap">
+        <span class="feat">Service Listings</span>
+        <span class="feat">Testimonials</span>
+        <span class="feat">Quote Request Form</span>
+        <span class="feat">Local SEO</span>
+        <span class="feat">Fast Load Speed</span>
+        <span class="feat">Mobile First</span>
+      </div>
+    </div>
+    <div class="proj-sidebar">
+      <div class="sb-block">
+        <span class="sb-label">Tech Stack</span>
+        <div class="tech-wrap">
+          <span class="tech">WordPress</span>
+          <span class="tech">ACF</span>
+          <span class="tech">PHP</span>
+        </div>
+      </div>
+      <div class="sb-block">
+        <span class="sb-label">Industry</span>
+        <div class="sb-val">Cleaning Services</div>
+      </div>
+      <div class="sb-block">
+        <span class="sb-label">Client Location</span>
+        <div class="sb-val">🇦🇺 Australia</div>
+      </div>
+      <div class="sb-block">
+        <span class="sb-label">Live Site</span>
+        <a class="live-link" href="https://www.anzcleaningservices.com.au" target="_blank">↗ View Live</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PROJECT 6 — CUTS CLOTHING -->
+<div class="project">
+  <div class="proj-top">
+    <div>
+      <div class="proj-num">Project 06</div>
+      <div class="proj-name">Cuts Clothing</div>
+      <div class="proj-url">cutsclothing.com — USA</div>
+    </div>
+    <span class="proj-badge">👔 Fashion & Apparel</span>
+  </div>
+  <div class="browser">
+    <div class="bar-row">
+      <div class="dot r"></div><div class="dot y"></div><div class="dot g"></div>
+      <div class="url-strip">www.cutsclothing.com</div>
+    </div>
+    <div class="shot s6" id="p6" style="background-image:url('cuts.png');background-size:cover;background-position:center top">
+      <div class="shot-glow"></div>
+      <div class="shot-inner">
+        <span class="shot-emoji">👔</span>
+        <div class="shot-title">Cuts Clothing</div>
+        <div class="shot-hint">📸 Website ka hero screenshot yahan paste karo</div>
+      </div>
+    </div>
+  </div>
+  <div class="proj-details">
+    <div class="proj-desc">
+      <h3>Fashion E-Commerce — Premium Menswear Brand, USA</h3>
+      <p>A sleek, minimal e-commerce store for Cuts Clothing — a premium menswear brand known for performance-focused clothing. The build prioritizes fast browsing, smooth product discovery, and a frictionless checkout experience — designed to match the brand's clean, modern aesthetic.</p>
+      <div class="feat-wrap">
+        <span class="feat">Shopify Store</span>
+        <span class="feat">Product Variants</span>
+        <span class="feat">Upsell / Cross-sell</span>
+        <span class="feat">Performance Optimized</span>
+        <span class="feat">Custom Sections</span>
+        <span class="feat">Mobile Optimized</span>
+      </div>
+    </div>
+    <div class="proj-sidebar">
+      <div class="sb-block">
+        <span class="sb-label">Tech Stack</span>
+        <div class="tech-wrap">
+          <span class="tech">Shopify</span>
+          <span class="tech">Liquid</span>
+          <span class="tech">JS</span>
+        </div>
+      </div>
+      <div class="sb-block">
+        <span class="sb-label">Industry</span>
+        <div class="sb-val">Fashion &amp; Apparel</div>
+      </div>
+      <div class="sb-block">
+        <span class="sb-label">Client Location</span>
+        <div class="sb-val">🇺🇸 USA</div>
+      </div>
+      <div class="sb-block">
+        <span class="sb-label">Live Site</span>
+        <a class="live-link" href="https://www.cutsclothing.com" target="_blank">↗ View Live</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PROJECT 7 — KULANI KINIS -->
+<div class="project">
+  <div class="proj-top">
+    <div>
+      <div class="proj-num">Project 07</div>
+      <div class="proj-name">Kulani Kinis</div>
+      <div class="proj-url">kulanikinis.com — Australia</div>
+    </div>
+    <span class="proj-badge">👙 Swimwear</span>
+  </div>
+  <div class="browser">
+    <div class="bar-row">
+      <div class="dot r"></div><div class="dot y"></div><div class="dot g"></div>
+      <div class="url-strip">www.kulanikinis.com</div>
+    </div>
+    <div class="shot s7" id="p7" style="background-image:url('kulani.png');background-size:cover;background-position:center top">
+      <div class="shot-glow"></div>
+      <div class="shot-inner">
+        <span class="shot-emoji">👙</span>
+        <div class="shot-title">Kulani Kinis</div>
+        <div class="shot-hint">📸 Website ka hero screenshot yahan paste karo</div>
+      </div>
+    </div>
+  </div>
+  <div class="proj-details">
+    <div class="proj-desc">
+      <h3>Swimwear E-Commerce — Lifestyle Brand, Australia</h3>
+      <p>A vibrant, visually rich e-commerce store for Kulani Kinis — an Australian swimwear and lifestyle brand. The website is designed to reflect the brand's playful, sun-soaked aesthetic while delivering a smooth shopping experience with easy product browsing, size guides, and fast checkout.</p>
+      <div class="feat-wrap">
+        <span class="feat">Shopify Store</span>
+        <span class="feat">Collections &amp; Filters</span>
+        <span class="feat">Size Guide</span>
+        <span class="feat">Wishlist</span>
+        <span class="feat">Visual-First Design</span>
+        <span class="feat">International Shipping</span>
+      </div>
+    </div>
+    <div class="proj-sidebar">
+      <div class="sb-block">
+        <span class="sb-label">Tech Stack</span>
+        <div class="tech-wrap">
+          <span class="tech">Shopify</span>
+          <span class="tech">Liquid</span>
+          <span class="tech">CSS3</span>
+        </div>
+      </div>
+      <div class="sb-block">
+        <span class="sb-label">Industry</span>
+        <div class="sb-val">Swimwear &amp; Lifestyle</div>
+      </div>
+      <div class="sb-block">
+        <span class="sb-label">Client Location</span>
+        <div class="sb-val">🇦🇺 Australia</div>
+      </div>
+      <div class="sb-block">
+        <span class="sb-label">Live Site</span>
+        <a class="live-link" href="https://www.kulanikinis.com" target="_blank">↗ View Live</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PROJECT 8 — MY MASTER COACH -->
+<div class="project">
+  <div class="proj-top">
+    <div>
+      <div class="proj-num">Project 08</div>
+      <div class="proj-name">My Master Coach</div>
+      <div class="proj-url">mymastercoach.com.au — Australia</div>
+    </div>
+    <span class="proj-badge">🎯 Coaching</span>
+  </div>
+  <div class="browser">
+    <div class="bar-row">
+      <div class="dot r"></div><div class="dot y"></div><div class="dot g"></div>
+      <div class="url-strip">mymastercoach.com.au</div>
+    </div>
+    <div class="shot s8" id="p8" style="background-image:url('coach.png');background-size:cover;background-position:center top">
+      <div class="shot-glow"></div>
+      <div class="shot-inner">
+        <span class="shot-emoji">🎯</span>
+        <div class="shot-title">My Master Coach</div>
+        <div class="shot-hint">📸 Website ka hero screenshot yahan paste karo</div>
+      </div>
+    </div>
+  </div>
+  <div class="proj-details">
+    <div class="proj-desc">
+      <h3>Coaching & Personal Development Website — Australia</h3>
+      <p>A professional coaching website for My Master Coach — designed to attract high-value clients and establish authority in the personal development space. The site features a compelling brand story, service breakdowns, testimonials, and a smooth consultation booking flow that converts visitors into clients.</p>
+      <div class="feat-wrap">
+        <span class="feat">WordPress Custom Theme</span>
+        <span class="feat">Booking System</span>
+        <span class="feat">Lead Capture Forms</span>
+        <span class="feat">Testimonials</span>
+        <span class="feat">Blog / Resources</span>
+        <span class="feat">SEO Optimized</span>
+      </div>
+    </div>
+    <div class="proj-sidebar">
+      <div class="sb-block">
+        <span class="sb-label">Tech Stack</span>
+        <div class="tech-wrap">
+          <span class="tech">WordPress</span>
+          <span class="tech">PHP</span>
+          <span class="tech">ACF</span>
+          <span class="tech">Elementor</span>
+        </div>
+      </div>
+      <div class="sb-block">
+        <span class="sb-label">Industry</span>
+        <div class="sb-val">Coaching &amp; Consulting</div>
+      </div>
+      <div class="sb-block">
+        <span class="sb-label">Client Location</span>
+        <div class="sb-val">🇦🇺 Australia</div>
+      </div>
+      <div class="sb-block">
+        <span class="sb-label">Live Site</span>
+        <a class="live-link" href="https://mymastercoach.com.au" target="_blank">↗ View Live</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ██ CONTACT ██ -->
+<div class="contact">
+  <span class="sec-label" style="position:relative;z-index:1;display:block;margin-bottom:16px">Available for Work</span>
+  <h2>Let's Build<br>Something <em>Great</em></h2>
+  <p>Open to Full-Time Remote · Part-Time Remote · Contract / Project-Based<br>
+  Available immediately · Flexible across USA (EST/PST) &amp; Australia (AEST) time zones</p>
+  <div class="c-btns">
+    <a class="cbtn pr" href="/cdn-cgi/l/email-protection#1a63756f685a7f777b737634797577">📧 <span class="__cf_email__" data-cfemail="1861776d6a587d75797174367b7775"> Huzaifa.ashraf.biz@gmail.com</span></a>
+    <a class="cbtn ol" href="https://www.linkedin.com/in/huzaifa-ashraf-474638230/">LinkedIn
+  </div>
+</div>
+
+<div class="footer">
+  <div class="footer-name">Huzaifa Ashraf</div>
+  <div class="footer-txt">WordPress Developer &amp; Web Des
